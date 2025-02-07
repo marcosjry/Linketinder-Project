@@ -1,4 +1,6 @@
-import util.Menu
+package marcos.linketinder
+
+import marcos.linketinder.domain.util.Menu
 
 static void main(String[] args) {
 // Marcos Antônio

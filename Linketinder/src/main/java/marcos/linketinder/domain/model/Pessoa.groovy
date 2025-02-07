@@ -1,4 +1,4 @@
-package model
+package marcos.linketinder.domain.model
 
 class Pessoa {
     String nome
