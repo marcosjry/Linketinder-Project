@@ -1,7 +1,8 @@
-package model.empresa
+package marcos.linketinder.domain.model.empresa
 
-import model.Competencia
-import model.Pessoa
+import marcos.linketinder.domain.model.Competencia
+import marcos.linketinder.domain.model.Pessoa
+
 
 class Empresa extends Pessoa implements PessoaJuridica{
 

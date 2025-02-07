@@ -1,7 +1,8 @@
-package model.candidato
+package marcos.linketinder.domain.model.candidato
 
-import model.Competencia
-import model.Pessoa
+import marcos.linketinder.domain.model.Competencia
+import marcos.linketinder.domain.model.Pessoa
+
 
 class Candidato extends Pessoa implements PessoaFisica{
 

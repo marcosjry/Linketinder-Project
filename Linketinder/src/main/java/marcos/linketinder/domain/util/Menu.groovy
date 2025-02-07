@@ -1,8 +1,9 @@
-package util
+package marcos.linketinder.domain.util
 
-import model.Competencia
-import model.candidato.Candidato
-import model.empresa.Empresa
+import marcos.linketinder.domain.model.Competencia
+import marcos.linketinder.domain.model.candidato.Candidato
+import marcos.linketinder.domain.model.empresa.Empresa
+
 
 class Menu {
 

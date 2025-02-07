@@ -1,4 +1,4 @@
-package model
+package marcos.linketinder.domain.model
 
 enum Competencia {
     PYTHON("python"),
