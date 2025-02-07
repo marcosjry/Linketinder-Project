@@ -58,7 +58,6 @@ Por enquanto esse projeto dispõe de funcionalidades simples que o java não pos
   * Métódos como gets e seters já são criados por padrão para variáveis de classe
 
 Como é uma linguagem de script, o groovy possibilita maior facilidade quando comparado com o JAVA.
-Além disso, 
 ---
 #### Foi adicionado testes utilizando o `Spock`. ele testa: 
 
