@@ -59,3 +59,8 @@ Por enquanto esse projeto dispõe de funcionalidades simples que o java não pos
 
 Como é uma linguagem de script, o groovy possibilita maior facilidade quando comparado com o JAVA.
 Além disso, 
+---
+#### Foi adicionado testes utilizando o `Spock`. ele testa: 
+
+* criação de candidatos e empresas
+* serviço que adiciona candidatos e empresas aos seus respectivos arrays.
