@@ -1,8 +1,5 @@
 import "./utils/menu-bar/menu-bar";
-import "./components/aplicacoes-component/aplicacoes-component";
 import "./components/candidato-component/candidato-component";
-import "./components/oportunidades-component/oportunidades-component";
-import "./components/perfil-component/perfil-component";
 import "./components/empresa-component/empresa-component";
 import "./components/lista-component/lista-component";
 import "./components/grafico-component/grafico-component";
