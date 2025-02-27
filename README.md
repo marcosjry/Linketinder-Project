@@ -3,7 +3,54 @@
 
 Esse projeto utiliza o **groovy**. Pra poder executá-lo é necessário possuir o `SDK` versão `17 ou mais recente`.
 
-#### Passos para executá-lo:
+
+---
+### Atualmente existem duas versões da aplicação:
+  * **Frontend** 
+    * Javascript, Typescript, HTML e CSS.
+  * **Backend**
+    * Groovy 
+
+Existem pelo menos 3 telas, sendo elas:
+  *  uma na visão do candidato que visualiza as vagas em que ele está inscrito.
+  *  uma na visão da empresa que consegue visualizar os candidatos inscritos na vaga e um gráfico, onde é possível visualizar as competências por candidato.
+  *  uma tela de Registro sendo possível escolher entre se registrar como um candidato ou como uma empresa.
+
+
+### Para executar o projeto e visualizar as telas no `Frontend` siga os passos a seguir:
+
+`1° Passo` - Clone o projeto em alguma pasta
+
+```bash
+  git clone <link do repositório> <escolha um nome caso queira>
+```
+
+`2° Passo` - Instalar o Node.js: Certifique-se de ter o Node.js instalado em seu sistema. Você pode verificar se está instalado e qual versão está usando com:
+
+```bash
+  node -v
+```
+> Se não estiver instalado, você pode baixá-lo em nodejs.org.
+
+`3° Passo` - Navegue até o diretório do projeto (caso ainda não esteja) e instale as dependências usando o npm
+
+```bash
+  npm install
+```
+
+`4° Passo` - Carregue a compilação dos arquivos em .ts com o seguinte comando: 
+
+```bash
+  npm run build
+```
+
+`5° Passo` - Depois de gerar os aquivos.js compilados na pasta `./dist` use o comando a seguir para rodar a aplicação:
+
+```bash
+  npm run start
+```
+---
+#### Passos para executá-lo ( `Versão Groov` ):
 
 `1° Passo` - Baixar o **JDK do java**.
 
