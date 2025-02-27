@@ -38,7 +38,7 @@ export class MenuBar extends HTMLElement {
                 const target = event.target as HTMLElement;
                 const componentName = target.getAttribute("data-component");
                 if(componentName === "registro-page") {
-                    window.location.href = './src/pages/registro/registro-component.html';
+                    window.location.href = './src/pages/registro/registro-page.html';
                 } 
                 else {
                     this.dispatchEvent(new CustomEvent("menu-selecionado", {
