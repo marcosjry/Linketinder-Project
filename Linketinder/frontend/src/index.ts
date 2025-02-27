@@ -1,5 +1,8 @@
 import "./utils/menu-bar/menu-bar";
-
+import "./components/candidato-component/candidato-component";
+import "./components/empresa-component/empresa-component";
+import "./components/lista-component/lista-component";
+import "./components/grafico-component/grafico-component";
 // Seleciona o container de conteúdo
 const conteudo = document.getElementById("content") as HTMLElement;
 
