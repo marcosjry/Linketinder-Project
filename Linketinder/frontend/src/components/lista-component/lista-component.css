@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.item-wrapper ul {
+    max-height: 400px;
+    width: 100%;
+    background: 
+    linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgba(255,0,164,1), darkorchid, rgb(0, 119, 255)) border-box;
+    border-radius: 20px;
+    border: 4px solid transparent;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+    list-style: none;
+    scrollbar-color: rgba(255,0,164,1) rgb(0, 119, 255);
+    clip-path: inset(0 0 0 0 round 20px);
+}
+
+.item-list {
+    width: 400px;
+    box-sizing: border-box;
+    font-size: 15px;
+    text-align: end;
+    color: black !important;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 15px;
+    border: 3px solid #C5C5C5;
+    background: white;
+    padding: 10px;
+}
+
+.item-list li {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.item-list h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.item-list span {
+    color: #710048;
+    font-weight: 800;
+    font-size: 18px;
+    text-align: end;
+}
+
+.item-list li:nth-child(n+1), .item-list li:nth-child(5), .item-list li:nth-child(6) {
+    border-bottom: 2px solid #C5C5C5;
+}
+
+.separator {
+    border: 1px solid #c5c5c55e;
+}
+
+.esconde-dado span {
+    filter: blur(4px);
+    pointer-events: none;
+    user-select: none;
+}
