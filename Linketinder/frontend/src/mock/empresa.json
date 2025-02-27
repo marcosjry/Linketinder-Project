@@ -1,0 +1,102 @@
+[
+    {
+        "nome": "InovaTech",
+        "email": "inovatech@exemplo.com",
+        "pais": "Brasil",
+        "cpfcnpj": "12345678901",
+        "estado": "SP",
+        "cep": "01000-000",
+        "descricao": "Buscamos desenvolvedores com experiência em Python e Django.",
+        "competencias": ["python", "django"]
+    },
+    {
+        "nome": "SoftWareHouse",
+        "email": "softwarehouse@exemplo.com",
+        "pais": "Brasil",
+        "cpfcnpj": "98765432100",
+        "estado": "RJ",
+        "cep": "20000-000",
+        "descricao": "Procuramos desenvolvedores full stack com experiência em React e Node.js.",
+        "competencias": ["react", "nodejs"]
+    },
+    {
+        "nome": "Web Solutions",
+        "email": "websolutions@exemplo.com",
+        "pais": "Brasil",
+        "cpfcnpj": "85274196325",
+        "estado": "MG",
+        "cep": "30100-000",
+        "descricao": "Desenvolvedor frontend com conhecimento em Angular e TypeScript.",
+        "competencias": ["angular", "typescript"]
+    },
+    {
+        "nome": "CloudCorp",
+        "email": "cloudcorp@exemplo.com",
+        "pais": "Brasil",
+        "cpfcnpj": "75395145632",
+        "estado": "RS",
+        "cep": "90000-000",
+        "descricao": "Procuramos especialistas em computação em nuvem com AWS e Azure.",
+        "competencias": ["aws", "azure"]
+    },
+    {
+        "nome": "DataScience Inc.",
+        "email": "datascience@exemplo.com",
+        "pais": "Brasil",
+        "cpfcnpj": "32165498700",
+        "estado": "SC",
+        "cep": "88000-000",
+        "descricao": "Buscamos cientistas de dados com experiência em machine learning e análise de dados.",
+        "competencias": ["machine learning", "python", "sql"]
+    },
+    {
+        "nome": "CyberSecure",
+        "email": "cybersecure@exemplo.com",
+        "pais": "Brasil",
+        "cpfcnpj": "78945612385",
+        "estado": "BA",
+        "cep": "40000-000",
+        "descricao": "Especialista em segurança da informação com conhecimento em pentest e redes.",
+        "competencias": ["pentest", "redes"]
+    },
+    {
+        "nome": "DevOps Solutions",
+        "email": "devops@exemplo.com",
+        "pais": "Brasil",
+        "cpfcnpj": "36985214796",
+        "estado": "PE",
+        "cep": "50000-000",
+        "descricao": "Engenheiro DevOps com experiência em Kubernetes e Docker.",
+        "competencias": ["kubernetes", "docker"]
+    },
+    {
+        "nome": "MobileApps",
+        "email": "mobileapps@exemplo.com",
+        "pais": "Brasil",
+        "cpfcnpj": "15975348629",
+        "estado": "CE",
+        "cep": "60000-000",
+        "descricao": "Desenvolvedor mobile com experiência em Flutter e React Native.",
+        "competencias": ["flutter", "react native"]
+    },
+    {
+        "nome": "E-Commerce Tech",
+        "email": "ecommerce@exemplo.com",
+        "pais": "Brasil",
+        "cpfcnpj": "26987453192",
+        "estado": "GO",
+        "cep": "74000-000",
+        "descricao": "Especialista em desenvolvimento para plataformas de e-commerce.",
+        "competencias": ["magento", "shopify"]
+    },
+    {
+        "nome": "AI Solutions",
+        "email": "aisolutions@exemplo.com",
+        "pais": "Brasil",
+        "cpfcnpj": "31987465320",
+        "estado": "DF",
+        "cep": "70000-000",
+        "descricao": "Pesquisador em IA com experiência em redes neurais e NLP.",
+        "competencias": ["redes neurais", "nlp"]
+    }
+]
