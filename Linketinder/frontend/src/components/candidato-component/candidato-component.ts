@@ -1,4 +1,5 @@
-
+import { loadObjetos } from "../../service/carrega-objetos-service";
+import { setDataOnListComponent } from "../../service/carrega-objetos-service";
 
 export class CandidatoComponent extends HTMLElement {
 
@@ -34,7 +35,10 @@ export class CandidatoComponent extends HTMLElement {
             this.shadowRoot!.appendChild(linkElement);
             this.shadowRoot!.appendChild(secondLinkElement);
 
-            
+            this.empresas = await loadObjetos(this.empresas, './src/mock', 'empresa');
+
+            const listaElement = this.shadowRoot?.querySelector("lista-component");
+            setDataOnListComponent(this.empresas, listaElement);
 
         } catch (error) {
             console.error("Erro ao carregar o HTML:", error);
