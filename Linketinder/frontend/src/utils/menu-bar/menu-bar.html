@@ -1,0 +1,21 @@
+<nav id="menu-container">
+    <img src="/assets/svg/logo.svg" alt="LinkeTinder">
+    <ul> 
+      <!--
+        <li data-component="perfil-component">Perfil</li>
+        <li data-component="oportunidades-component">Oportunidades</li>
+        <li data-component="aplicacoes-component">Aplicações</li>-->
+        <li class="dropdown">
+            <button class="dropbtn" id="loginButton">
+              Login
+              <span class="arrow">▾</span>
+            </button>
+            <ul class="dropdown-content" id="dropdownMenu">
+              <li class="dropdown-after-click" data-component="candidato-component">Login Candidato</li>
+              <li class="dropdown-after-click" data-component="empresa-component">Login Empresa</li>
+            </ul>
+        </li>
+        <li data-component="registro-page">Registrar</li>
+    </ul>
+</nav>
+    
