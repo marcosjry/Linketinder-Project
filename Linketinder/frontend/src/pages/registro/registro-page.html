@@ -28,34 +28,41 @@
             </div>
             <div class="form-text">
                 <label class="static-value" for="contaNome">Nome</label>
-                <input type="text" id="contaNome" name="taskName" required>
+                <input type="text" id="contaNome" name="name">
+                <span id="erroNome" class="erro"></span>
             </div>
             <div class="form-text">
                 <label class="static-value" for="contaEmail">E-mail</label>
-                <input type="text" id="contaEmail" name="taskName" required>
+                <input type="text" id="contaEmail" name="email" required>
+                <span id="erroEmail" class="erro"></span>
             </div>
 
             <!-- Campo que muda de acordo com opção inicial -->
             <div class="form-text" id="campoCandidato" style="display: none;">
                 <label class="static-value" for="idade">Idade</label>
                 <input type="number" id="contaIdade" name="idade" >
+                <span id="erroIdade" class="erro"></span>
             </div>
             <div class="form-text" id="campoEmpresa" style="display: none;">
-                <label class="static-value" for="pais">País:</label>
+                <label class="static-value" for="pais">País</label>
                 <input type="text" id="contaPais" name="pais">
+                <span id="erroPais" class="erro"></span>
             </div>
 
             <div class="form-text">
                 <label class="static-value" for="contaCpfCnpj">CPF/CNPJ</label>
-                <input type="text" id="contaCpfCnpj" name="taskName" required>
+                <input type="text" id="contaCpfCnpj" name="cpfcnpj" required>
+                <span id="erroCpfCnpj" class="erro"></span>
             </div>
             <div class="form-text">
                 <label class="static-value" for="contaEstado">Estado</label>
-                <input type="text" id="contaEstado" name="taskName" required>
+                <input type="text" id="contaEstado" name="estado">
+                <span id="erroEstado" class="erro"></span>
             </div>
             <div class="form-text">
                 <label class="static-value" for="contaCEP">CEP</label>
-                <input type="text" id="contaCEP" name="taskName" required>
+                <input type="text" id="contaCEP" name="cep" required>
+                <span id="erroCep" class="erro"></span>
             </div>
             <div class="descricao form-text">
                 <label for="contaDescricao">Descrição</label>
@@ -63,7 +70,7 @@
             </div>
             <div class="form-text">
                 <label class="static-value" for="contaCompetencias">Competências</label>
-                <input type="text" id="contaCompetencias" placeholder="separe por vírgulas" name="taskName" required>
+                <input type="text" id="contaCompetencias" placeholder="separe por vírgulas" name="competencias" required>
             </div>
             
             <button type="submit">Criar</button>

@@ -169,3 +169,11 @@ button {
     transition: box-shadow 0.2s ease-in;
   }
 
+  .erro {
+    color: red;
+    font-size: 0.9em;
+  }
+  
+  .input-erro {
+    border: 2px solid red;
+  }
