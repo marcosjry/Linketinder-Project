@@ -1,5 +1,7 @@
 import { Candidato } from "../../model/candidato";
 import { Empresa } from "../../model/empresa";
+import { validaDadosCompartilhados } from "../../service/valida-empresa-&-candidato";
+import { verificaInput } from "../../service/valida-empresa-&-candidato";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -27,44 +29,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   radioCandidato.addEventListener('change', toggleCampos);
   radioEmpresa.addEventListener('change', toggleCampos);
-  function validateForm(): boolean {
+
+  function validaTipoConta(): boolean {
     // Verifica se alguma opção foi selecionada
     if (!radioCandidato.checked && !radioEmpresa.checked) {
       alert('Selecione se você é candidato ou empresa.');
       return false;
     }
-  
-    // Valida o campo específico conforme a opção escolhida
-    if (radioCandidato.checked) {
-      const idadeInput = document.getElementById('contaIdade') as HTMLInputElement;
-      let idade = idadeInput.valueAsNumber;
-      console.log(idade);
-      if (idade < 18) {
-        alert('Por favor, informe sua idade.');
-        return false;
-      }
-    }
-  
-    if (radioEmpresa.checked) {
-      const paisInput = document.getElementById('contaPais') as HTMLInputElement;
-      if (!paisInput.value.trim()) {
-        alert('Por favor, informe o país da empresa.');
-        return false;
-      }
-    }
-  
-    // Outras validações podem ser adicionadas aqui
     return true;
   }
   
   document.getElementById('turnBack')!.addEventListener('click', () => {
-    console.log("clicado");
     window.location.href = '../../../index.html';
   });
   
-  document.getElementById('registroForm')!.addEventListener('submit', function (e) {
+  document.getElementById('registroForm')!.addEventListener('submit', async function (e) {
     e.preventDefault(); // Evita o recarregamento da página
-    if(validateForm()) {
+    if(validaTipoConta()) {
       // Captura os valores do formulário
       const nome = document.getElementById('contaNome')  as HTMLInputElement;
       const email = document.getElementById('contaEmail')  as HTMLInputElement;
@@ -75,30 +56,51 @@ document.addEventListener("DOMContentLoaded", function () {
       const competencias = document.getElementById('contaCompetencias')  as HTMLInputElement;
     
       const comp = competencias.value.split(",");
-    
-      let inputDiferente;
       let conta;
+      const dadosCompValidos = await validaDadosCompartilhados(nome, email, estado, cep);
+
+      // verifica se os dados iguais em empresa ou candidato estão válidos
+      if(!dadosCompValidos) return;
+
       if(radioCandidato.checked) {
-        inputDiferente = document.getElementById('contaIdade') as HTMLInputElement;
-        let idade = inputDiferente.valueAsNumber;
-        conta = new Candidato (nome.value, email.value, cpfCnpj.value, estado.value, cep.value, descricao.value, comp, idade);
+
+        let idade = document.getElementById('contaIdade') as HTMLInputElement;
+        const erroIdade = document.getElementById("erroIdade") as HTMLElement;
+        const idadeValida = await verificaInput("idade", idade.value, idade, erroIdade, "Idade inválida.");
+        if(!idadeValida) return;
+
+        const erroCpf = document.getElementById("erroCpfCnpj") as HTMLElement;
+        const cpfValido = await verificaInput("cpf", cpfCnpj.value, cpfCnpj, erroCpf, "CPF inválido. Ex: 123.456.789-09");
+        if(!cpfValido) return;
+
+        let idadeAsNumber = idade.valueAsNumber;
+        conta = new Candidato (nome.value, email.value, cpfCnpj.value, estado.value, cep.value, descricao.value, comp, idadeAsNumber);
         let contas: any[] = JSON.parse(localStorage.getItem('contas-candidato') || '[]');
         contas.push(conta);
         localStorage.setItem('contas-candidato', JSON.stringify(contas)); // Salva no localStorage
+        alert("Registro realizado com Sucesso!")
+        //Redireciona de volta para a lista de tarefas
+        window.location.href = '../../../index.html';
       }
       if(radioEmpresa.checked) {
-        inputDiferente = document.getElementById('contaPais') as HTMLInputElement;
-        conta = new Empresa (nome.value, email.value, cpfCnpj.value, estado.value, cep.value, descricao.value, comp, inputDiferente.value);
-        console.log(conta);
+
+        let pais = document.getElementById('contaPais') as HTMLInputElement;
+        const erroPais = document.getElementById("erroPais") as HTMLElement;
+        const paisValido = await verificaInput("nome", pais.value, pais, erroPais, "Não é aceito caracteres especiais e nem números.");
+        if(!paisValido) return;
+
+        const erroCpfCnpj = document.getElementById("erroCpfCnpj") as HTMLElement;
+        const cpfValido = await verificaInput("cnpj", cpfCnpj.value, cpfCnpj, erroCpfCnpj, "CNPJ inválido. Ex: 12.345.678/0001-99 ou 12345678000199");
+        if(!cpfValido) return;
+
+        conta = new Empresa (nome.value, email.value, cpfCnpj.value, estado.value, cep.value, descricao.value, comp, pais.value);
         let contas: any[] = JSON.parse(localStorage.getItem('contas-empresa') || '[]');
         contas.push(conta);
-      
         localStorage.setItem('contas-empresa', JSON.stringify(contas)); // Salva no localStorage
-      }      
-    
-      alert("Registro realizado com Sucesso!")
-      // Redireciona de volta para a lista de tarefas
-      window.location.href = '../../../index.html';
+        alert("Registro realizado com Sucesso!")
+        //Redireciona de volta para a lista de tarefas
+        window.location.href = '../../../index.html';
+      }       
     }}
   )
 });
